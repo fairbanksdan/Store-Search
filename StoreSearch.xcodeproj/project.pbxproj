@@ -17,6 +17,7 @@
 		69D1CE1A1A1551C200B74547 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69D1CE191A1551C200B74547 /* SearchResultCell.xib */; };
 		69D1CE1C1A1554FB00B74547 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D1CE1B1A1554FB00B74547 /* SearchResultCell.swift */; };
 		69D1CE1E1A155E1A00B74547 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69D1CE1D1A155E1A00B74547 /* NothingFoundCell.xib */; };
+		69D1CE201A1687C900B74547 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69D1CE1F1A1687C900B74547 /* LoadingCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		69D1CE191A1551C200B74547 /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		69D1CE1B1A1554FB00B74547 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		69D1CE1D1A155E1A00B74547 /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
+		69D1CE1F1A1687C900B74547 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				69A8242D1A153969000E4709 /* Main.storyboard */,
 				69D1CE191A1551C200B74547 /* SearchResultCell.xib */,
 				69D1CE1D1A155E1A00B74547 /* NothingFoundCell.xib */,
+				69D1CE1F1A1687C900B74547 /* LoadingCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			files = (
 				69A8242F1A153969000E4709 /* Main.storyboard in Resources */,
 				69A824341A153969000E4709 /* LaunchScreen.xib in Resources */,
+				69D1CE201A1687C900B74547 /* LoadingCell.xib in Resources */,
 				69D1CE1A1A1551C200B74547 /* SearchResultCell.xib in Resources */,
 				69D1CE1E1A155E1A00B74547 /* NothingFoundCell.xib in Resources */,
 				69A824311A153969000E4709 /* Images.xcassets in Resources */,
