@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B23" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
@@ -16,12 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="LCQ-EJ-KIy">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="tKV-NW-5fC">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="A5b-El-GjK"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="3Sf-fq-fqF"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="X44-wf-P75"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="W4S-KQ-nxm"/>
                                 </connections>
                             </tableView>
                             <searchBar contentMode="redraw" placeholder="App name, artist, song, album, e-book" translatesAutoresizingMaskIntoConstraints="NO" id="7D3-v9-TaA">
@@ -31,21 +31,58 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="uE6-aA-wMF"/>
                                 </connections>
                             </searchBar>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nac-Ku-1Ku">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nvh-HV-eeZ">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3GS-Ar-hUa">
+                                        <rect key="frame" x="150" y="8" width="300" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="A28-BF-6YB"/>
+                                            <constraint firstAttribute="height" constant="28" id="lme-TE-brW"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="All"/>
+                                            <segment title="Music"/>
+                                            <segment title="Software"/>
+                                            <segment title="E-books"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="WHH-6w-PXa"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="AuM-tc-VUs"/>
+                                    <constraint firstAttribute="centerY" secondItem="3GS-Ar-hUa" secondAttribute="centerY" id="B5p-DN-vs1"/>
+                                    <constraint firstAttribute="centerX" secondItem="3GS-Ar-hUa" secondAttribute="centerX" id="L2v-Dq-BWi"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="LCQ-EJ-KIy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="09b-Uv-aaZ"/>
+                            <constraint firstAttribute="trailing" secondItem="nac-Ku-1Ku" secondAttribute="trailing" id="Bef-3e-Q6G"/>
+                            <constraint firstItem="tKV-NW-5fC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="FLi-EE-E3P"/>
+                            <constraint firstItem="tKV-NW-5fC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ksz-HH-z0i"/>
+                            <constraint firstItem="nac-Ku-1Ku" firstAttribute="top" secondItem="7D3-v9-TaA" secondAttribute="bottom" id="M5C-1q-wbG"/>
+                            <constraint firstItem="Nvh-HV-eeZ" firstAttribute="top" secondItem="7D3-v9-TaA" secondAttribute="bottom" id="P0c-QL-7qQ"/>
                             <constraint firstAttribute="trailing" secondItem="7D3-v9-TaA" secondAttribute="trailing" id="R3U-C9-QJs"/>
-                            <constraint firstItem="LCQ-EJ-KIy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cf2-MV-evH"/>
+                            <constraint firstItem="nac-Ku-1Ku" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SOn-Z9-J5M"/>
                             <constraint firstItem="7D3-v9-TaA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="crY-0a-jb5"/>
                             <constraint firstItem="7D3-v9-TaA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="nDl-N5-C65"/>
-                            <constraint firstAttribute="trailing" secondItem="LCQ-EJ-KIy" secondAttribute="trailing" id="tbx-69-9pw"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LCQ-EJ-KIy" secondAttribute="bottom" id="vG4-AQ-D2K"/>
+                            <constraint firstItem="Nvh-HV-eeZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nMX-Xd-NFw"/>
+                            <constraint firstAttribute="trailing" secondItem="Nvh-HV-eeZ" secondAttribute="trailing" id="qMs-bk-nKj"/>
+                            <constraint firstAttribute="trailing" secondItem="tKV-NW-5fC" secondAttribute="trailing" id="tCj-ua-W79"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tKV-NW-5fC" secondAttribute="bottom" id="zfO-2k-CQ1"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="searchBar" destination="7D3-v9-TaA" id="jEM-Yw-Aug"/>
-                        <outlet property="tableView" destination="LCQ-EJ-KIy" id="L7M-UU-b52"/>
+                        <outlet property="segmentedControl" destination="3GS-Ar-hUa" id="Sp5-KB-xLN"/>
+                        <outlet property="tableView" destination="tKV-NW-5fC" id="Iol-52-yNX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
