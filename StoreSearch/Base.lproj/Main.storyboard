@@ -112,7 +112,6 @@
                                             <action selector="close" destination="gWz-Zk-R0D" eventType="touchUpInside" id="9s4-ng-OPr"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zzK-cR-b5E"/>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="i8K-Xp-jmw">
                                         <rect key="frame" x="10" y="115" width="220" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -163,12 +162,21 @@
                                             <action selector="openInStore" destination="gWz-Zk-R0D" eventType="touchUpInside" id="3kY-vq-h87"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zzK-cR-b5E">
+                                        <rect key="frame" x="70" y="9" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="cuC-dr-wfI"/>
+                                            <constraint firstAttribute="height" constant="100" id="zVK-v9-g6k"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.95000000000000007" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Tnh-8k-jZf" secondAttribute="trailing" constant="6" id="1C9-P4-W59"/>
                                     <constraint firstAttribute="width" constant="240" id="adL-Ag-AcH"/>
                                     <constraint firstAttribute="height" constant="240" id="dK9-3R-QuR"/>
+                                    <constraint firstItem="zzK-cR-b5E" firstAttribute="top" secondItem="d57-r6-Fw0" secondAttribute="top" constant="9" id="kbS-cf-hjz"/>
+                                    <constraint firstAttribute="centerX" secondItem="zzK-cR-b5E" secondAttribute="centerX" id="uYV-qO-bMD"/>
                                     <constraint firstAttribute="bottom" secondItem="Tnh-8k-jZf" secondAttribute="bottom" constant="6" id="zTP-yp-gwf"/>
                                 </constraints>
                             </view>

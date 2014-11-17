@@ -11,6 +11,7 @@ import UIKit
 class DetailViewController: UIViewController {
     
     var searchResult: SearchResult!
+    var downloadTask: NSURLSessionDownloadTask?
     
     @IBOutlet weak var popupView: UIView!
     @IBOutlet weak var artworkImageView: UIImageView!
@@ -53,6 +54,11 @@ class DetailViewController: UIViewController {
     }
     
     func updateUI() {
+            
+        if let url = NSURL(string: searchResult.artworkURL100) {
+            downloadTask = artworkImageView.loadImageWithURL(url)
+        }
+            
         nameLabel.text = searchResult.name
             
         if searchResult.artistName.isEmpty {
@@ -79,6 +85,13 @@ class DetailViewController: UIViewController {
         
         priceButton.setTitle(priceText, forState: .Normal)
             
+        
+            
+    }
+    
+    deinit {
+        println("deinit \(self)")
+        downloadTask?.cancel()
     }
     
     @IBAction func openInStore() {
